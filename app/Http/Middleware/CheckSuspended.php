@@ -19,7 +19,7 @@ class CheckSuspended
         if (auth()->check() && auth()->user()->isSuspended()) {
             auth()->logout();
 
-            $message = 'Your account has been suspended. Please contact our support team!';
+            $message = 'Your account has been suspended. Please contact our support team at com.mindustry.me!';
 
             return redirect()->route('login')->withMessage($message);
         }
